@@ -4,13 +4,13 @@ A simple mock course website created with Flask and SQLite. Pages on this site i
 
 # Install The Following
 
-Python
-Flask
-SQLite
+* Python
+* Flask
+* SQLite
 
 # In order to run the website follow these steps
 Go into the same directory of the application
 Run the following: 
 
-python app.py 
-(python3 app.py on some machines)
+`python app.py`
+(`python3 app.py` on some machines)
