@@ -1,0 +1,35 @@
+/* beginning of body styles */
+.main {
+  flex-direction: row;
+}
+
+.lectures {
+  text-align: center;
+  padding: 30px;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.desc {
+  font-size: 12px;
+  font-style: normal;
+}
+
+.images {
+  width: 300px;
+  height: 250px;
+}
+/* end of body styles*/
+
+/* start of lab card styling */
+
+.lectureCard {
+  width: 25%;
+  min-width: 24%;
+}
+
+.lectureCardContent {
+  text-align: center;
+}
+
+/* end of lab card styling */

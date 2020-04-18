@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Register Portal</title>
+    <link rel="stylesheet" href="../static/styles/loginUser.css" type="text/css">
+    <link rel="stylesheet" href="../static/styles/globalStyles.css">
+    <script src="../static/scripts/sideNavBarAnimation.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    {% with flashMessages = get_flashed_messages() %}
+    {% if flashMessages %}
+    <div id="closeWarning" class="incorrectAuthDiv">
+        {% for flash in flashMessages %}
+        <span id="closeWarning" class="closeWarningButton" onclick="closeWarning()">&times;</span>
+        {{ flash }}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+    <div class='loginContainer'>
+        <div class='loginCard'>
+            <form action="{{ url_for('registerUser') }}" method="POST">
+                <label>First Name</label>
+                <input class='inputStyle' name="firstname" placeholder="First Name">
+
+                <label>Username</label>
+                <input class='inputStyle' name="username" placeholder="Username">
+
+                <label>Password</label>
+                <input class='inputStyle' name="password" placeholder="Password">
+
+                <label>User Type</label>
+                <select class='inputStyle' id="userTypeDropDown" name="usertype">
+                    <option disabled selected>Select a user type</option>
+                    <option> student </option>
+                    <option> instructor </option>
+                </select>
+
+                <div class='loginButtons'>
+                    <div>
+                        <input class='inputButton' type="submit" value="Register">
+                    </div>
+                    <div class="registerDiv">
+                        <a href='/login'>Go back to login</a>.
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

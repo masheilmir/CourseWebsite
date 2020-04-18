@@ -1,0 +1,99 @@
+/* start of body styles*/
+
+.courseDesDiv,
+.instructorInfo {
+  flex-basis: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 2px 16px;
+  padding-bottom: 20px;
+}
+.courseDesDiv {
+  margin-right: 10px;
+}
+
+.courseDesDiv h3,
+.instructorInfo h3,
+.prereqDiv h4,
+.exclDiv h4,
+.newsBoardDiv,
+.courseDesDivSideLinks div {
+  text-align: center;
+}
+
+.instructorInfo {
+  flex-wrap: wrap;
+}
+
+.instructorInfo img {
+  margin-left: 60px;
+  margin-top: 40px;
+  width: 200px;
+  height: 250px;
+}
+
+.instructorInfo a {
+  text-decoration: none;
+}
+
+.instructorInfo a:link,
+.instructorInfo a:visited {
+  color: #55a6d9;
+}
+
+.instructorInfo a:hover {
+  color: #061e40;
+}
+
+.instructorInfo a:active {
+  color: white;
+}
+
+.courseDesDivSide,
+.courseDesDivSideLinks,
+.mainDes,
+.instructorInfo {
+  display: flex;
+}
+
+.prereqDiv {
+  flex-basis: 50%;
+  margin-right: 5px;
+}
+
+.prereqDiv p,
+.exclDiv p,
+.courseDesDivSide {
+  margin-top: -10px;
+}
+
+.exclDiv,
+.courseDesDivSideLinks div {
+  flex-basis: 50%;
+}
+
+.courseDesDivSideLinks div {
+  margin-top: 10px;
+}
+
+.instructorInfoTextDiv {
+  flex-basis: 60%;
+}
+
+.newsBoardDiv{
+  margin: 80px;
+}
+
+.newsBoardTitle{
+  font-size: 40px;
+}
+
+.newsPara {
+  font-size: 20px;
+}
+
+iframe {
+  margin-left: 300px;
+  width: 800px;
+  height: 600px;
+}

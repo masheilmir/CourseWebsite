@@ -1,0 +1,15 @@
+.sRemarkRequests,
+.enterGradesForm {
+  margin-top: 70px;
+}
+
+.iGradesCard {
+  padding: 15px;
+}
+
+.remarkFormContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}

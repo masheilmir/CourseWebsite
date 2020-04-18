@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Feedbacks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/globalStyles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/globalStyles2.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/feedbacks.css')}}">
+    <link rel="stylesheet" href="../static/styles/loginUser.css" type="text/css">
+    <script src="../static/scripts/sideNavBarAnimation.js"></script>
+</head>
+
+<body id="main" class="mainDes">
+    <nav class="sideBar">
+        <div class="welcomeMsgDiv">
+            <h5>
+                Logged in as {{ user }}
+            </h5>
+            <a href='/logout' class="navButton">
+                <button class='link'>
+                    <font class="fontStyle">Logout</font>
+                </button>
+            </a>
+        </div>
+        <div class="headerDiv">
+            {% if session['student'] %}
+            <h1>
+                Anonymous Feedback Form
+            </h1>
+            {% endif %}
+            {% if session['instructor'] %}
+            <h1>
+                Anonymous Feedbacks
+            </h1>
+            {% endif %}
+        </div>
+        <div class="buttonDiv">
+            <a href="#" onclick="openSideNavBar()">
+                <img src="../static/resources/sidebarIcon.png" alt="no image" class="sidebarImg">
+            </a>
+        </div>
+    </nav>
+
+
+    <div id="sideMenu" class="sideBarDiv">
+        <a href="#" class="closeButton" onclick="closeSideNavBar()">&times;</a>
+
+        <div class="navDiv">
+
+            <div>
+                <a href="/home">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Home</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/lectures">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Lectures</font>
+                    </button>
+                </a>
+            </div>
+
+            <div>
+                <a href="/assignments">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Assignments</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/resources">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Resources</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/labs">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Labs</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/tests">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Tests</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/grades">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Grades</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/feedbacks">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Feedbacks</font>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        {% with flashMessages = get_flashed_messages() %}
+        {% if flashMessages %}
+        <div id="closeWarning" class="incorrectAuthDiv">
+            {% for flash in flashMessages %}
+            <span id="closeWarning" class="closeWarningButton" onclick="closeWarning()">&times;</span>
+            {{ flash }}
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        <div class='feedbackContainer'>
+            {% if session['student'] %}
+            <div class='loginCard'>
+                <form action="{{ url_for('createFeedbacks') }}" method="POST">
+                    <label>Feedback (keep it PG please)</label>
+                    <textarea class="feedbackTextArea" name="feedback"
+                        placeholder="Enter your constructive feedback here..."></textarea>
+
+                    <label>Instructors</label>
+                    <select class="inputStyle" id="instructrNameDropdown" name="instructorname">
+                        <option disabled selected>Select an instructor</option>
+                        {% for i in range(iName|length) %}
+                        <option>{{ iName[i]['fname'] }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <div class='loginButtons'>
+                        <div>
+                            <input class='inputButton' type="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            {% endif %}
+
+            {% if session['instructor'] %}
+            {% for i in range(feedbacks|length) %}
+            <div class='feedbackCard'>
+                <p class='content'>{{ feedbacks[i]['feedback'] }}</p>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+
+    <footer>
+        <div class="logoDiv">
+            <a href="https://www.utsc.utoronto.ca/cms/computer-science-1" target="_blank">
+                <img src="../static/resources/uoftlogo.png" alt="UofT logo" class="logoimg" />
+            </a>
+            <p class="footerText"> UTSC Computer Science</p>
+        </div>
+        <div class="creatorsDiv">
+            <p>Created by Manpreet Bhatti and Masheil Mir</p>
+        </div>
+    </footer>
+</body>
+
+</html>

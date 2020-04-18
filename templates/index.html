@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css')}}" type="text/css">
+    <link rel="stylesheet" href="../static/styles/globalStyles.css">
+    <link rel="stylesheet" href="../static/styles/globalStyles2.css">
+    <script src="../static/scripts/sideNavBarAnimation.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body id="main">
+    <nav class="sideBar">
+        <div class="welcomeMsgDiv">
+            <h5>
+                Logged in as {{ user }}
+            </h5>
+            <a href='/logout' class="navButton">
+                <button class='link'>
+                    <font class="fontStyle">Logout</font>
+                </button>
+            </a>
+        </div>
+        <div class="headerDiv">
+            <h1>
+                CSCB20 -- Introduction to Web Applications and Databases
+            </h1>
+        </div>
+        <div class="buttonDiv">
+            <a href="#" onclick="openSideNavBar()">
+                <img src="../static/resources/sidebarIcon.png" alt="no image" class="sidebarImg">
+            </a>
+        </div>
+    </nav>
+
+
+    <div id="sideMenu" class="sideBarDiv">
+        <a href="#" class="closeButton" onclick="closeSideNavBar()">&times;</a>
+
+        <div class="navDiv">
+
+            <div>
+                <a href="/home">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Home</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/lectures">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Lectures</font>
+                    </button>
+                </a>
+            </div>
+
+            <div>
+                <a href="/assignments">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Assignments</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/resources">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Resources</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/labs">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Labs</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/tests">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Tests</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/grades">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Grades</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/feedbacks">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Feedbacks</font>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="contentContainer">
+        <section>
+            <div class="mainDes">
+                <div class="courseDesDiv">
+                    <h3><u>Course description</u></h3>
+                    <p class="courseDesP">A practical introduction to databases and Web app development. Databases:
+                        terminology and
+                        applications; creating, querying and updating databases; the entity-relationship model for
+                        database
+                        design. Web documents and applications: static and interactive documents; Web servers and
+                        dynamic
+                        server-generated content; Web application development and interface with databases. </p>
+                    <div class="courseDesDivSide">
+                        <div class="prereqDiv">
+                            <h4>Prerequisite</h4>
+                            <p>Some experience with programming in an imperative
+                                language such as
+                                Python, Java or C.</p>
+                        </div>
+                        <div class="exclDiv">
+                            <h4>Exclusion</h4>
+                            <p> This course may not be taken after - or concurrently
+                                with - any C- or
+                                D-level CSC course. </p>
+                        </div>
+                    </div>
+                    <div class="courseDesDivSideLinks">
+                        <div>
+                            <a href="../static/reources/syllabus.pdf" class="navButton" target="_blank">
+                                <button class='link'>
+                                    <font class="fontStyle">Syllabus</font>
+                                </button>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://piazza.com/mail.utoronto.ca/winter2016/cscb20/home" class="navButton"
+                                target="_blank">
+                                <button class='link'>
+                                    <font class="fontStyle">Discussion board</font>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="instructorInfo">
+                    <div class="instructorInfoTextDiv">
+                        <h3><u>Instructor information</u></h3>
+                        <p><b>Dr. Anna Bretscher</b></p>
+                        <p><b>Email:</b> <a href="mailto:bretscher@utsc.utoronto.ca"
+                                target="_blank">bretscher@utsc.utoronto.ca</a>
+                        </p>
+                        <p><b>Office:</b> IC 493</p>
+                        <p><b>Phone:</b> (416) 208 - 4745</p>
+                        <p><b>Lectures:</b> Monday 9:15 - 11:00 in HW 216</p>
+                        <p><b>Office Hours:</b> Wednesday 11:00 - 12:00</p>
+                    </div>
+                    <div>
+                        <img src="../static/resources/Anna_Bretscher.jpg" alt="Anna's profile pic" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="newsBoardDiv">
+                <div class="newsBoardCard">
+                    <div class="newsContent">
+                        <h3 class="textColour">April 10th</h3>
+                        <p class="newsPara">Welcome to CSCB20. Please note that tutorials will begin in week 2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="calendarDiv">
+                <iframe
+                    src="https://calendar.google.com/calendar/embed?src=062btcpe6ukskfptv62jsc7sug%40group.calendar.google.com&amp;ctz=America/Toronto"
+                    scrolling="no" frameborder="0"></iframe>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="logoDiv">
+            <a href="https://www.utsc.utoronto.ca/cms/computer-science-1" target="_blank">
+                <img src="../static/resources/uoftlogo.png" alt="UofT logo" class="logoimg" />
+            </a>
+            <p class="footerText"> UTSC Computer Science</p>
+        </div>
+        <div class="creatorsDiv">
+            <p>Created by Manpreet Bhatti and Masheil Mir</p>
+        </div>
+    </footer>
+</body>
+
+</html>

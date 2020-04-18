@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lectures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/styles/lectures.css" type="text/css">
+    <link rel="stylesheet" href="../static/styles/globalStyles.css">
+    <link rel="stylesheet" href="../static/styles/globalStyles2.css">
+</head>
+
+<body class="main">
+
+    <nav class="sideBar">
+        <div class="welcomeMsgDiv">
+            <h5>
+                Logged in as {{ user }}
+            </h5>
+            <a href='/logout' class="navButton">
+                <button class='link'>
+                    <font class="fontStyle">Logout</font>
+                </button>
+            </a>
+        </div>
+        <div class="headerDiv">
+            <h1>
+                Lectures
+            </h1>
+        </div>
+        <div class="buttonDiv">
+            <a href="#" onclick="openSideNavBar()">
+                <img src="../static/resources/sidebarIcon.png" alt="no image" class="sidebarImg">
+            </a>
+        </div>
+    </nav>
+
+
+    <div id="sideMenu" class="sideBarDiv">
+        <a href="#" class="closeButton" onclick="closeSideNavBar()">&times;</a>
+
+        <div class="navDiv">
+
+            <div>
+                <a href="/home">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Home</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/lectures">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Lectures</font>
+                    </button>
+                </a>
+            </div>
+
+            <div>
+                <a href="/assignments">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Assignments</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/resources">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Resources</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/labs">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Labs</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/tests">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Tests</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/grades">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Grades</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/feedbacks">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Feedbacks</font>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mainDes">
+        <!-- Lab Cards -->
+        <section>
+            <div class="lectureDiv">
+
+                <div class="lectureCard">
+                    <div class="lectureCardContent">
+                        <h4 class="name">Lecture 1</h4>
+                        <p>
+                            <div class="textColour">Introduction, Databases Background</div>
+                        </p>
+                        <a href="../static/resources/dummy.pdf" target="_blank"><img
+                                src="../static/resources/lecture1.png" alt="no image" class="images"></a>
+                        <p class=lectureCardContent>
+                            <div class="textColour">Click above to access lecture slides</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lectureCard">
+                    <div class="lectureCardContent">
+                        <h4 class="name">Lecture 2</h4>
+                        <p>
+                            <div class="textColour">Schema Diagrams, Relational Algebra</div>
+                        </p>
+                        <a href="../static/resources/dummy.pdf" target="_blank"> <img
+                                src="../static/resources/lecture2.png" alt="no image" class="images"></a>
+                        <p class=lectureCardContent>
+                            <div class="textColour">Click above to access lecture slides</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lectureCard">
+                    <div class="lectureCardContent">
+                        <h4 class="name">Lecture 3</h4>
+                        <p>
+                            <div class="textColour">SQL and MySQL</div>
+                        </p>
+                        <a href="../static/resources/dummy.pdf" target="_blank"> <img
+                                src="../static/resources/lecture3.png" alt="no image" class="images"></a>
+                        <p class=lectureCardContent>
+                            <div class="textColour">Click above to access lecture slides</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lectureCard">
+                    <div class="lectureCardContent">
+                        <h4 class="name">Lecture 4</h4>
+                        <p>
+                            <div class="textColour">MySQL Queries, Creating and Editing Tables</div>
+                        </p>
+                        <a href="../static/resources/dummy.pdf" target="_blank"> <img
+                                src="../static/resources/lecture4.png" alt="no image" class="images"></a>
+                        <p class=lectureCardContent>
+                            <div class="textColour">Click above to access lecture slides</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lectureCard">
+                    <div class="lectureCardContent">
+                        <h4 class="name">Lecture 5</h4>
+                        <p>
+                            <div class="textColour">MySQL Outer Joins, Views, NULL, String Functions</div>
+                        </p>
+                        <a href="../static/resources/dummy.pdf" target="_blank"> <img
+                                src="../static/resources/lecture5.png" alt="no image" class="images"></a>
+                        <p class=lectureCardContent>
+                            <div class="textColour">Click above to access lecture slides</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lectureCard">
+                    <div class="lectureCardContent">
+                        <h4 class="name">Lecture 6</h4>
+                        <p>
+                            <div class="textColour">Reading Week</div>
+                        </p>
+                        <p class=lectureCardContent>
+                            <div class="textColour">No Lecture</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lectureCard">
+                    <div class="lectureCardContent">
+                        <h4 class="name">Lecture 7</h4>
+                        <p>
+                            <div class="textColour">HTML, CSS</div>
+                        </p>
+                        <a href="../static/resources/dummy.pdf" target="_blank"> <img
+                                src="../static/resources/lecture7.png" alt="no image" class="images"></a>
+                        <p class=lectureCardContent>
+                            <div class="textColour">Click above to access lecture slides</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lectureCard">
+                    <div class="lectureCardContent">
+                        <h4 class="name">Lecture 8</h4>
+                        <p>
+                            <div class="textColour">PHP</div>
+                        </p>
+                        <a href="../static/resources/dummy.pdf" target="_blank"> <img
+                                src="../static/resources/lecture8.png" alt="no image" class="images"></a>
+                        <p class=lectureCardContent>
+                            <div class="textColour">Click above to access lecture slides</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lectureCard">
+                    <div class="lectureCardContent">
+                        <h4 class="name">Lecture 9</h4>
+                        <p>
+                            <div class="textColour">PHP and SQL</div>
+                        </p>
+                        <a href="../static/resources/dummy.pdf" target="_blank"> <img
+                                src="../static/resources/lecture9.png" alt="no image" class="images"></a>
+                        <p class=lectureCardContent>
+                            <div class="textColour">Click above to access lecture slides</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lectureCard">
+                    <div class="lectureCardContent">
+                        <h4 class="name">Lecture 10</h4>
+                        <p>
+                            <div class="textColour">JavaScript and jQuery</div>
+                        </p>
+                        <a href="../static/resources/dummy.pdf" target="_blank"> <img
+                                src="../static/resources/lecture10.png" alt="no image" class="images"></a>
+                        <p class=lectureCardContent>
+                            <div class="textColour">Click above to access lecture slides</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lectureCard">
+                    <div class="lectureCardContent">
+                        <h4 class="name">Lecture 11</h4>
+                        <p>
+                            <div class="textColour">jQuery, AJAX, JSON</div>
+                        </p>
+                        <a href="../static/resources/dummy.pdf" target="_blank"> <img
+                                src="../static/resources/lecture11.png" alt="no image" class="images"></a>
+                        <p class=lectureCardContent>
+                            <div class="textColour">Click above to access lecture slides</div>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="lectureCard">
+                    <div class="lectureCardContent">
+                        <h4 class="name">Last Years Final</h4>
+                        <p>
+                            <div class="textColour">2016 Final</div>
+                        </p>
+                        <a href="../static/resources/dummy.pdf" target="_blank"> <img
+                                src="../static/resources/lecture12.png" alt="no image" class="images"></a>
+                        <p class=lectureCardContent>
+                            <div class="textColour">Click above to access past final</div>
+                        </p>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+
+
+    <!--footer-->
+    <footer>
+        <div class="logoDiv">
+            <a href="https://www.utsc.utoronto.ca/cms/computer-science-1" target="_blank">
+                <img src="../static/resources/uoftlogo.png" alt="UofT logo" class="logoimg" />
+            </a>
+            <p class="footerText"> UTSC Computer Science</p>
+        </div>
+        <div class="creatorsDiv">
+            <p>Created by Manpreet Bhatti and Masheil Mir</p>
+        </div>
+    </footer>
+
+    <script src="../static/scripts/sideNavBarAnimation.js"></script>
+</body>
+
+</html>

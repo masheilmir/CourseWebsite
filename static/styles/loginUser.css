@@ -1,0 +1,105 @@
+body {
+  display: flex;
+}
+
+.incorrectAuthDiv {
+  color: white;
+  background-color: #061e40;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 15px;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.closeWarningButton {
+  color: white;
+  line-height: 13px;
+  font-weight: bold;
+  font-size: 32px;
+  float: right;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closeWarningButton:hover {
+  color: #55a6d9;
+}
+
+.loginCard {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 20px 16px;
+  margin: 10px 20px;
+  flex-direction: row;
+}
+
+.loginContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.inputStyle,
+.feedbackTextArea {
+  font-size: 14px;
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 7px;
+  margin-bottom: 20px;
+  padding: 15px;
+  resize: vertical; /* ability resize the textarea vertically */
+}
+
+.feedbackTextArea {
+  height: 100px;
+}
+
+.inputButton {
+  background-color: #061e40;
+  color: white;
+  font-size: 14px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.inputButton:hover {
+  background-color: #55a6d9;
+}
+
+.loginButtons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.loginButtons div {
+  flex-basis: 50%;
+}
+
+.registerDiv {
+  float: right;
+  text-align: right;
+}
+
+.registerDiv a {
+  text-decoration: none;
+  color: #55a6d9;
+}
+
+.registerDiv a:hover {
+  color: #061e40;
+}
+
+.registerDiv a:active {
+  color: white;
+}

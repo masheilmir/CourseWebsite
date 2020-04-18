@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Assignments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/styles/Assignments.css">
+    <link rel="stylesheet" href="../static/styles/globalStyles.css">
+    <link rel="stylesheet" href="../static/styles/globalStyles2.css">
+</head>
+
+<body>
+
+    <nav class="sideBar">
+        <div class="welcomeMsgDiv">
+            <h5>
+                Logged in as {{ user }}
+            </h5>
+            <a href='/logout' class="navButton">
+                <button class='link'>
+                    <font class="fontStyle">Logout</font>
+                </button>
+            </a>
+        </div>
+        <div class="headerDiv">
+            <h1>
+                Assignments
+            </h1>
+        </div>
+        <div class="buttonDiv">
+            <a href="#" onclick="openSideNavBar()">
+                <img src="../static/resources/sidebarIcon.png" alt="no image" class="sidebarImg">
+            </a>
+        </div>
+    </nav>
+
+
+    <div id="sideMenu" class="sideBarDiv">
+        <a href="#" class="closeButton" onclick="closeSideNavBar()">&times;</a>
+
+        <div class="navDiv">
+
+            <div>
+                <a href="/home">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Home</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/lectures">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Lectures</font>
+                    </button>
+                </a>
+            </div>
+
+            <div>
+                <a href="/assignments">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Assignments</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/resources">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Resources</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/labs">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Labs</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/tests">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Tests</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/grades">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Grades</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/feedbacks">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Feedbacks</font>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mainDes">
+        <section>
+            <div class="assOverviewDiv">
+                <h3><u>Overview</u></h3>
+                <p>Here are the assignment and exercise topics, weights, and due dates. The exercise and
+                    assignment handouts will be posted here. All exercises and assignments will be submitted on
+                    <a href="https://markus.utsc.utoronto.ca/cscb20w20" target="_blank" class="pureLink">MarkUs</a>.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="assignmentContainer">
+                <h3><u>Assignments</u></h3>
+                <div class="assignmentDiv">
+                    <div class="assignmentCard">
+                        <h4 class="assignmentTitle"><i>Relational Algebra and MySQL</i></h4>
+                        <div>
+                            <h4><u>Due Date</u></h4>
+                            <p><b>Part 1:</b> Wednesday Feb. 1, 11:59pm <br> Submit to <a
+                                    href="https://markus.utsc.utoronto.ca/cscb20w20" target="_blank"
+                                    class="pureLink">MarkUs</a></p>
+                            <p><b>Part 2 and 3:</b> Saturday Feb. 11, 11:59pm (for 5% bonus) or Friday Feb. 17,
+                                11:59pm <br> Submit to <a href="https://markus.utsc.utoronto.ca/cscb20w20"
+                                    target="_blank" class="pureLink">MarkUs</a> <br> You can download a dumpfile
+                                for IMDB_SMALL <a
+                                    href="https://www.utsc.utoronto.ca/~bretscher/b20/assignments/IMDB_SMALL.sql"
+                                    target="_blank" class="pureLink">here</a> <br> To use it, type: <i>mysql -u
+                                    utorid -p IMDB_SMALL.sql</i>
+                            </p>
+                        </div>
+                        <div class="assignmentBottomTitles">
+                            <h4><u>Exercise</u></h4>
+                            <h4><u>Weight</u></h4>
+                            <h4><u>Solution</u></h4>
+                        </div>
+                        <div class="assignmentBottomContent">
+                            <p><a href="../static/resources/B20Assignment2-2.pdf" target="_blank"
+                                    class="pureLink">Handout</a>
+                            </p>
+                            <p>15%</p>
+                            <p><a href="../static/resources/soln.pdf" target="_blank" class="pureLink">Solution</a></p>
+                        </div>
+                    </div>
+                    <div class="assignmentCard">
+                        <h4 class="assignmentTitle"><i>HTML, CSS, PHP</i></h4>
+                        <div>
+                            <h4><u>Due Date</u></h4>
+                            <p><b>Part 1:</b> Wednesday March 10, 11:59pm (worth 50%) <br> Submit to <a
+                                    href="https://markus.utsc.utoronto.ca/cscb20w20" target="_blank"
+                                    class="pureLink">MarkUs</a></p>
+                            <p><b>Part 2:</b> Friday March 19, 11.59pm (worth 50%) <br> Submit to <a
+                                    href="https://markus.utsc.utoronto.ca/cscb20w20" target="_blank"
+                                    class="pureLink">MarkUs</a></p>
+                        </div>
+                        <div class="assignmentBottomTitles">
+                            <h4><u>Exercise</u></h4>
+                            <h4><u>Weight</u></h4>
+                            <h4><u>Solution</u></h4>
+                        </div>
+                        <div class="assignmentBottomContent">
+                            <p><a href="../static/resources/B20Assignment2-2.pdf" target="_blank"
+                                    class="pureLink">Handout</a>
+                            </p>
+                            <p>15%</p>
+                            <p><a href="../static/resources/soln.pdf" target="_blank" class="pureLink">Solution</a></p>
+                        </div>
+                    </div>
+                    <div class="assignmentCard">
+                        <h4 class="assignmentTitle"><i>Web Application and Database</i></h4>
+                        <div>
+                            <h4><u>Due Date</u></h4>
+                            <p>Friday March 31, 11:59pm</p>
+                        </div>
+                        <div class="assignmentBottomTitles">
+                            <h4><u>Exercise</u></h4>
+                            <h4><u>Weight</u></h4>
+                            <h4><u>Solution</u></h4>
+                        </div>
+                        <div class="assignmentBottomContent">
+                            <p><a href="../static/resources/B20Assignment2-2.pdf" target="_blank"
+                                    class="pureLink">Handout</a>
+                            </p>
+                            <p>15%</p>
+                            <p><a href="../static/resources/soln.pdf" target="_blank" class="pureLink">Solution</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="faqsContainer">
+                <h3><u>FAQs</u></h3>
+                <div class="assignmentDiv">
+                    <div class="assignmentCard">
+                        <h4 class="assignmentTitle">Relational Algebra and MySQL</h4>
+                        <div>
+                            <p><b>Question:</b> If the MySQL portion asks for a director or actor without specifying
+                                which attributes, what should I return?</p>
+                            <p><b>Answer:</b> Return the first name, last name. </p>
+                        </div>
+                    </div>
+                    <div class="assignmentCard">
+                        <h4 class="assignmentTitle">Relational Algebra and MySQL</h4>
+                        <div>
+                            <p><b>Question:</b> Can we use tools from online?</p>
+                            <p><b>Answer:</b> Yes, but they should be cited in your honour code. </p>
+                        </div>
+                    </div>
+                    <div class="assignmentCard">
+                        <h4 class="assignmentTitle">HTML, CSS, PHP</h4>
+                        <div>
+                            <p><b>Question:</b> Are we allowed to use libraries like bootcamp?</p>
+                            <p><b>Answer:</b> No. All code should be written in bare bone HTML, CSS, and PHP. </p>
+                        </div>
+                    </div>
+                    <div class="assignmentCard">
+                        <h4 class="assignmentTitle">HTML, CSS, PHP</h4>
+                        <div>
+                            <p><b>Question:</b> Are we allowed to use libraries like bootcamp?</p>
+                            <p><b>Answer:</b> No. All code should be written in bare bone HTML, CSS, and PHP. </p>
+                        </div>
+                    </div>
+                    <div class="assignmentCard">
+                        <h4 class="assignmentTitle">Web Application and Database</h4>
+                        <div>
+                            <p><b>Question:</b> Are we allowed to form groups for this assignment?</p>
+                            <p><b>Answer:</b> Yes! In fact, we suggest creating groups for this assignment as it
+                                requires more work. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="logoDiv">
+            <a href="https://www.utsc.utoronto.ca/cms/computer-science-1" target="_blank">
+                <img src="../static/resources/uoftlogo.png" alt="UofT logo" class="logoimg" />
+            </a>
+            <p class="footerText"> UTSC Computer Science</p>
+        </div>
+        <div class="creatorsDiv">
+            <p>Created by Manpreet Bhatti and Masheil Mir</p>
+        </div>
+    </footer>
+
+    <script src="../static/scripts/sideNavBarAnimation.js"></script>
+</body>
+
+</html>

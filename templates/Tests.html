@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tests</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/styles/Tests.css">
+    <link rel="stylesheet" href="../static/styles/globalStyles.css">
+    <link rel="stylesheet" href="../static/styles/globalStyles2.css">
+</head>
+
+<body>
+    <nav class="sideBar">
+        <div class="welcomeMsgDiv">
+            <h5>
+                Logged in as {{ user }}
+            </h5>
+            <a href='/logout' class="navButton">
+                <button class='link'>
+                    <font class="fontStyle">Logout</font>
+                </button>
+            </a>
+        </div>
+        <div class="headerDiv">
+            <h1>
+                Tests
+            </h1>
+        </div>
+        <div class="buttonDiv">
+            <a href="#" onclick="openSideNavBar()">
+                <img src="../static/resources/sidebarIcon.png" alt="no image" class="sidebarImg">
+            </a>
+        </div>
+    </nav>
+
+
+    <div id="sideMenu" class="sideBarDiv">
+        <a href="#" class="closeButton" onclick="closeSideNavBar()">&times;</a>
+
+        <div class="navDiv">
+
+            <div>
+                <a href="/home">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Home</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/lectures">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Lectures</font>
+                    </button>
+                </a>
+            </div>
+
+            <div>
+                <a href="/assignments">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Assignments</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/resources">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Resources</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/labs">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Labs</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/tests">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Tests</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/grades">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Grades</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/feedbacks">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Feedbacks</font>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="mainDes">
+        <section>
+            <div class="testOverviewDiv">
+                <h3><u>Midterm Information</u></h3>
+                <div class="testOverviewContent">
+                    <p>There will be one midterm. The midterm will be 75min in length. You should go to either HW215 or
+                        HW216 depending on your last name as shown here.</p>
+                    <div>
+                        <p>Preparing for the midterm:</p>
+                        <ul>
+                            <li>Understand all parts of A1</li>
+                            <li>The midterm will cover everything on databases that we did from the start until part way
+                                through the week 6 lecture.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="testInfoContainer">
+                <div class="testDiv">
+                    <div class="testCard">
+                        <h4 class="testTitle">2020-1 Winter -- CSCB20 -- Midterm -- Room Allocation</h4>
+                        <div class="testContentTitles">
+                            <h4><u>Course</u></h4>
+                            <h4><u>Instructor</u></h4>
+                        </div>
+                        <div class="testContent">
+                            <p>CSCB20</p>
+                            <p>A. Attarwala</p>
+                        </div>
+                        <div class="testContentTitles">
+                            <h4><u>Date</u></h4>
+                            <h4><u>Time</u></h4>
+                        </div>
+                        <div class="testContent">
+                            <p>Monday 13 February</p>
+                            <p>5:00 PM</p>
+                        </div>
+                        <div class="testContentTitles">
+                            <h4><u>Room #</u></h4>
+                            <h4><u>Room #</u></h4>
+                        </div>
+                        <div class="testContent">
+                            <p>HW 215</p>
+                            <p>HW 216</p>
+                        </div>
+                        <div class="testContentTitles">
+                            <h4><u>Last Name</u></h4>
+                            <h4><u>Last Name</u></h4>
+                        </div>
+                        <div class="testContent">
+                            <p>A - HE</p>
+                            <p>HO - Z</p>
+                        </div>
+                        <div class="testContentTitles">
+                            <h4><u>Capacity</u></h4>
+                            <h4><u>Capacity</u></h4>
+                        </div>
+                        <div class="testContent">
+                            <p>50</p>
+                            <p>110</p>
+                        </div>
+                        <div class="testContentTitles">
+                            <h4><u># of Students</u></h4>
+                            <h4><u># of Students</u></h4>
+                        </div>
+                        <div class="testContent">
+                            <p>48</p>
+                            <p>108</p>
+                        </div>
+                    </div>
+                    <div class="testCard">
+                        <h4 class="testTitle">Past Midterm</h4>
+                        <div class="testImg">
+                            <a href="../static/resources/testA.pdf" target="_blank"><img
+                                    src="../static/resources/test.png" /></a>
+                        </div>
+                        <p class="imgText">Click above to access the past midterm</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="testOverviewDiv">
+                <h3><u>Final Information</u></h3>
+                <div class="testOverviewContent">
+                    <p>There will be one midterm. The midterm will be 75min in length. You should go to either HW215 or
+                        HW216 depending on your last name as shown here.</p>
+                    <div>
+                        <p>Preparing for the midterm:</p>
+                        <ul>
+                            <li>Understand all parts of A1</li>
+                            <li>The midterm will cover everything on databases that we did from the start until part way
+                                through the week 6 lecture.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="testInfoContainer">
+                <div class="testDiv">
+                    <div class="testCard">
+                        <h4 class="testTitle">2020-1 Winter -- CSCB20 -- Final -- Room Allocation</h4>
+                        <div class="testContentTitles">
+                            <h4><u>Course</u></h4>
+                            <h4><u>Instructor</u></h4>
+                        </div>
+                        <div class="testContent">
+                            <p>CSCB20</p>
+                            <p>A. Attarwala</p>
+                        </div>
+                        <div class="testContentTitles">
+                            <h4><u>Date</u></h4>
+                            <h4><u>Time</u></h4>
+                        </div>
+                        <div class="testContent">
+                            <p>Tuesday 21 April</p>
+                            <p>2:00 PM</p>
+                        </div>
+                        <div class="testContentTitles">
+                            <h4><u>Room #</u></h4>
+                        </div>
+                        <div class="testContent">
+                            <p>HL 170</p>
+                        </div>
+                        <div class="testContentTitles">
+                            <h4><u>Last Name</u></h4>
+                        </div>
+                        <div class="testContent">
+                            <p>A - Z</p>
+                        </div>
+                        <div class="testContentTitles">
+                            <h4><u>Capacity</u></h4>
+                        </div>
+                        <div class="testContent">
+                            <p>300</p>
+                        </div>
+                        <div class="testContentTitles">
+                            <h4><u># of Students</u></h4>
+                        </div>
+                        <div class="testContent">
+                            <p>100</p>
+                        </div>
+                    </div>
+                    <div class="testCard">
+                        <h4 class="testTitle">Past Final</h4>
+                        <div class="testImg">
+                            <a href="../static/resources/testA.pdf" target="_blank"><img
+                                    src="../static/resources/test.png" /></a>
+                        </div>
+                        <p class="imgText">Click above to access the past final</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="logoDiv">
+            <a href="https://www.utsc.utoronto.ca/cms/computer-science-1" target="_blank">
+                <img src="../static/resources/uoftlogo.png" alt="UofT logo" class="logoimg" />
+            </a>
+            <p class="footerText"> UTSC Computer Science</p>
+        </div>
+        <div class="creatorsDiv">
+            <p>Created by Manpreet Bhatti and Masheil Mir</p>
+        </div>
+    </footer>
+
+    <script src="../static/scripts/sideNavBarAnimation.js"></script>
+</body>
+
+</html>

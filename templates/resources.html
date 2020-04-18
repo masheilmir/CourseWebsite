@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Resources</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/styles/resources.css" type="text/css">
+    <link rel="stylesheet" href="../static/styles/globalStyles.css">
+    <link rel="stylesheet" href="../static/styles/globalStyles2.css">
+</head>
+
+<body class="main">
+
+    <nav class="sideBar">
+        <div class="welcomeMsgDiv">
+            <h5>
+                Logged in as {{ user }}
+            </h5>
+            <a href='/logout' class="navButton">
+                <button class='link'>
+                    <font class="fontStyle">Logout</font>
+                </button>
+            </a>
+        </div>
+        <div class="headerDiv">
+            <h1>
+                Resources
+            </h1>
+        </div>
+        <div class="buttonDiv">
+            <a href="#" onclick="openSideNavBar()">
+                <img src="../static/resources/sidebarIcon.png" alt="no image" class="sidebarImg">
+            </a>
+        </div>
+    </nav>
+
+
+    <div id="sideMenu" class="sideBarDiv">
+        <a href="#" class="closeButton" onclick="closeSideNavBar()">&times;</a>
+
+        <div class="navDiv">
+
+            <div>
+                <a href="/home">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Home</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/lectures">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Lectures</font>
+                    </button>
+                </a>
+            </div>
+
+            <div>
+                <a href="/assignments">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Assignments</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/resources">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Resources</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/labs">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Labs</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/tests">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Tests</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/grades">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Grades</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/feedbacks">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Feedbacks</font>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h4 class="subheading">Online Resources</h4>
+        <p class="desc">Course information, lecture notes, tutorial material, important announcements, etc.
+            will be posted on this website. It is your responsibility to visit it frequently.</p>
+        <p class="desc">Below are links to a beginner tutorial for MySQL and a link to the class discussion board.
+            Clicking on the images will redirect you to the respective pages in a new tab.</p>
+        <p class="desc">Students are encouraged to use the bulletin board to discuss the course material, pose questions
+            on the assignments, etc. The bulletin board will be monitored by the instructor and by your TAs.
+            Please, be very careful not to reveal (parts of) your solution on the bulletin board</p>
+    </div>
+
+    <div class="mainDes">
+        <!-- Lab Cards -->
+        <section>
+            <div class="resourceDiv">
+                <div class="resourceCard">
+                    <div class="resourceCardContent">
+                        <p class="cardTitle"><u>MySQL</u></p>
+                        <a href="https://code.tutsplus.com/articles/sql-for-beginners--net-8200" target="_blank"><img
+                                src="../static/resources/mysql.png" alt="no image" class="images"></a>
+                        <p class=resourceCardContent>
+                            <div class="textColour">Click above to access the MySQL tutorial</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="resourceCard">
+                    <div class="resourceCardContent">
+                        <p class="cardTitle"><u>Piazza</u></p>
+                        <a href="https://piazza.com/utoronto.ca/winter2017/cscb20" target="_blank"><img
+                                src="../static/resources/piazza.png" alt="no image" class="images"> </a>
+                        <p class=resourceCardContent>
+                            <div class="textColour">Click above to access the discussion board</div>
+                        </p>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <div>
+        <h4 class="subheading">Software and Documentation</h4>
+        <p class="desc">Below are instructions on how to access Mathlab from your personal computer. There is also
+            a download link to install a SSH client for Windows users.
+        </p>
+        <p class="desc">PuTTY is a good, free SSH client and can be downloaded if you follow the
+            image link below.</p>
+    </div>
+
+    <div class="mainDes">
+        <!-- Lab Cards -->
+        <section>
+            <div class="resourceDiv">
+                <div class="resourceCard">
+                    <div class="resourceCardContent">
+                        <p class="cardTitle"><u>PuTTY</u></p>
+                        <a href="https://www.putty.org/" target="_blank"><img src="../static/resources/putty.png"
+                                alt="no image" class="images"></a>
+                        <p class=resourceCardContent>
+                            <div class="textColour">Click above to access the PuTTY download link</div>
+                        </p>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <div>
+        <p class="desc1">Login to Mathlab on MacOS and Windows using the following command:</p>
+        <p class="desc2">ssh utorid@mathlab.utsc.utoronto.ca</p>
+        <p class="desc2">Enter your password</p>
+        <br>
+        <p class="desc1">Your terminal should look similar to the following: </p>
+    </div>
+
+    <div class="imageFlex">
+        <img src="../static/resources/mathlab.png" alt="no image" class="mathlab">
+    </div>
+
+    <!--footer-->
+    <footer>
+        <div class="logoDiv">
+            <a href="https://www.utsc.utoronto.ca/cms/computer-science-1" target="_blank">
+                <img src="../static/resources/uoftlogo.png" alt="UofT logo" class="logoimg" />
+            </a>
+            <p class="footerText"> UTSC Computer Science</p>
+        </div>
+        <div class="creatorsDiv">
+            <p>Created by Manpreet Bhatti and Masheil Mir</p>
+        </div>
+    </footer>
+
+    <script src="../static/scripts/sideNavBarAnimation.js"></script>
+
+</body>
+
+</html>

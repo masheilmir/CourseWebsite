@@ -1,0 +1,205 @@
+body {
+  background-color: rgb(238, 238, 238);
+  font-family: "Monaco";
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.mainDes {
+  margin-top: 90px;
+}
+
+.sideBar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #002a5c;
+  display: flex;
+  flex-direction: row;
+}
+
+.sideBar a {
+  right: 0;
+  display: block;
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 17px;
+  align-content: center;
+}
+
+.sideBarDiv {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: #061e40;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  right: 0;
+}
+
+.sideBarDiv a {
+  text-decoration: none;
+  color: #ccc;
+  display: block;
+  transition: 0.5s;
+}
+
+.sideBarDiv a:hover {
+  color: #55a6d9;
+}
+
+.sideBarDiv .closeButton {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sideBar h1 {
+  text-align: center;
+}
+
+.navDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.sideBarlink {
+  width: 100%;
+  margin-left: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.sideBarlink:hover,
+.sideBarlink:active {
+  width: 100%;
+}
+
+.link,
+.sideBarlink {
+  transition: background-color 0.5s ease-in-out 0s, color 0.5s linear 0.5s;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 15px;
+  border: none;
+  font-family: sans-serif;
+  background-color: #061e40;
+  right: 0px;
+}
+
+.link:hover,
+.link:active,
+.sideBarlink:hover,
+.sideBarlink:active {
+  background-color: #55a6d9;
+  color: #55a6d9;
+}
+
+.headerDiv,
+.buttonDiv,
+.welcomeMsgDiv {
+  width: auto;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.headerDiv {
+  flex-basis: 60%;
+}
+
+.buttonDiv,
+.welcomeMsgDiv {
+  flex-basis: 20%;
+}
+
+.welcomeMsgDiv h5,
+.headerDiv h1 {
+  margin-left: 20px;
+  color: white;
+}
+
+.welcomeMsgDiv h5 {
+  margin-top: 5px;
+}
+
+.headerDiv h1 {
+  margin-top: 20px;
+}
+
+.sidebarImg {
+  position: absolute;
+  right: 0%;
+  height: 25px;
+  width: auto;
+  margin-top: 5px;
+  padding: 20px;
+  align-content: right;
+}
+
+.sideBarDiv .fontStyle {
+  font-family: "Monaco";
+  font-size: 22px;
+  color: white;
+}
+
+.fontStyle {
+  font-family: "Monaco";
+  font-size: large;
+  color: white;
+}
+
+.navButton {
+  text-decoration: none;
+  outline: none;
+}
+
+/* start of footer styles*/
+footer {
+  background: #061e40;
+  margin-top: 20px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+}
+
+footer img {
+  max-width: 80px;
+  height: auto;
+}
+
+footer p {
+  color: white;
+}
+
+.logoDiv,
+.creatorsDiv {
+  flex-basis: 50%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.creatorsDiv p {
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 160px;
+}
+
+.footerText {
+  position: relative;
+  display: inline;
+  top: -30px;
+}
+/* end of footer styles*/

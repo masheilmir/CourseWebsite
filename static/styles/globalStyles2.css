@@ -1,0 +1,88 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: rgb(238, 238, 238);
+  font-family: "Monaco";
+}
+
+.resourceDiv,
+.teamDiv,
+.lectureDiv,
+.labDiv,
+.sGradesDiv,
+.iGradesDiv,
+.remarkReqDiv,
+.newsBoardDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.lectureCard,
+.teamCard,
+.resourceCard,
+.labCard,
+.sGradesCard,
+.iGradesCard,
+.newsBoardCard {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-grow: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 2px 16px;
+  margin: 10px 20px;
+  justify-content: space-between;
+}
+
+.resourceCard:hover,
+.teamCard:hover,
+.lectureCard:hover,
+.labCard:hover,
+.testCard:hover,
+.assignmentCard:hover,
+.sGradesCardhover:hover,
+.iGradesCardhover:hover,
+.remarkReqCard:hover,
+.newsBoardCard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.resourceCardContent,
+.cardContent,
+.lectureCardContent,
+.labCardContent,
+.sGradesContent,
+.iGradesContent,
+.remarkReqContent,
+.newsContent {
+  line-height: normal;
+  font-size: 12px;
+}
+
+.resourceName,
+.lectureName,
+.name,
+.labName {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 0;
+}
+
+.labTitle,
+.lectureTitle,
+.resourceTitle {
+  font-size: 20px;
+  font-weight: 900;
+  color: #002a5c;
+}
+
+.textColour {
+  color: grey;
+  font-size:15px;
+}

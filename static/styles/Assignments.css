@@ -1,0 +1,67 @@
+.assOverviewDiv {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 2px 16px;
+  padding-bottom: 20px;
+}
+
+.pureLink {
+  text-decoration: none;
+  color: #55a6d9;
+}
+
+.pureLink:hover {
+  color: #061e40;
+}
+
+.pureLink:active {
+  color: white;
+}
+
+.assignmentContainer {
+  margin-top: 20px;
+  padding: 2px 16px;
+  padding-bottom: 20px;
+}
+
+.assOverviewDiv h3,
+.assignmentContainer h3,
+.faqsContainer h3,
+.assignmentTitle {
+  text-align: center;
+}
+
+.faqsContainer {
+  padding: 2px 16px;
+  padding-bottom: 20px;
+}
+
+.assignmentDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 2;
+  margin-left: 14px;
+}
+
+.assignmentCard {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 2px 16px;
+  width: 30%;
+  min-width: 29%;
+}
+
+.assignmentBottomTitles,
+.assignmentBottomContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

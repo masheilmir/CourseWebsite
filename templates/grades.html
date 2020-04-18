@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Grades</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/globalStyles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/globalStyles2.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/grades.css')}}">
+    <link rel="stylesheet" href="../static/styles/loginUser.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/feedbacks.css')}}">
+    <script src="../static/scripts/sideNavBarAnimation.js"></script>
+</head>
+
+<body id="main">
+    <nav class="sideBar">
+        <div class="welcomeMsgDiv">
+            <h5>
+                Logged in as {{ user }}
+            </h5>
+            <a href='/logout' class="navButton">
+                <button class='link'>
+                    <font class="fontStyle">Logout</font>
+                </button>
+            </a>
+        </div>
+        <div class="headerDiv">
+            <h1>
+                Grades
+            </h1>
+        </div>
+        <div class="buttonDiv">
+            <a href="#" onclick="openSideNavBar()">
+                <img src="../static/resources/sidebarIcon.png" alt="no image" class="sidebarImg">
+            </a>
+        </div>
+    </nav>
+
+
+    <div id="sideMenu" class="sideBarDiv">
+        <a href="#" class="closeButton" onclick="closeSideNavBar()">&times;</a>
+
+        <div class="navDiv">
+
+            <div>
+                <a href="/home">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Home</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/lectures">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Lectures</font>
+                    </button>
+                </a>
+            </div>
+
+            <div>
+                <a href="/assignments">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Assignments</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/resources">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Resources</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/labs">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Labs</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/tests">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Tests</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/grades">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Grades</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/feedbacks">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Feedbacks</font>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT ACCESS TO GRADES -->
+    {% if session['student'] %}
+    <div class="mainDes">
+
+        <section class="heading">
+            <center>
+                <h2>
+                    Grades for {{ user }}
+                </h2>
+            </center>
+        </section>
+
+        {% if sGrades == None %}
+        <div class="heading">
+            <center>
+                <h2>
+                    There are no grades currently available for viewing
+                </h2>
+            </center>
+        </div>
+        {% else %}
+        <section>
+            <div class="sGradesDiv">
+                <div class="sGradesCard">
+                    <div class="sGradesCardContent">
+                        <center>
+                            <h4 class="assignment"><u>Assignment</u></h4>
+                            {% for grades in sGrades %}
+                            <div class="dbDiv">
+                                <h5 class="assignment">{{ grades['eval'] }}</h5>
+                            </div>
+                            {% endfor %}
+                        </center>
+                    </div>
+                </div>
+
+                <div class="sGradesCard">
+                    <div class="sGradesCardContent">
+                        <center>
+                            <h4 class="mark"><u>Mark</u></h4>
+                            {% for grades in sGrades %}
+                            <div class="dbDiv">
+                                <h5 class="mark">{{ grades['mark'] }}</h5>
+                            </div>
+                            {% endfor %}
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            {% with flashMessages = get_flashed_messages() %}
+            {% if flashMessages %}
+            <div id="closeWarning" class="incorrectAuthDiv">
+                {% for flash in flashMessages %}
+                <span id="closeWarning" class="closeWarningButton" onclick="closeWarning()">&times;</span>
+                {{ flash }}
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+            <center>
+                <h2>Remark Request Form</h2>
+            </center>
+            <div class="remarkFormContainer">
+                <div class="loginCard">
+                    <form action="{{ url_for('remarkRequest') }}" method="POST">
+
+                        <label>Pick an assignment</label>
+                        <select class="inputStyle" id="aDropDown" type="text" name="aName">
+                            <option disabled selected>Select an evaluation</option>
+                            {% for eval in evaluation %}
+                            <option>{{ eval['eval'] }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <label>Reason for remark</label>
+                        <textarea class="feedbackTextArea" name="reason"
+                            placeholder="Enter your constructive reason here..."></textarea>
+
+                        <div class='loginButtons'>
+                            <div>
+                                <input class='inputButton' type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+        {% endif %}
+
+    </div>
+    {% endif %}
+
+    <!-- INSTRUCTOR ACCESS TO GRADES -->
+    {% if session['instructor'] %}
+    <div class="mainDes">
+
+        <section class="heading">
+            <center>
+                <h2>
+                    CSCB20 Grades
+                </h2>
+            </center>
+        </section>
+
+        <!-- NO GRADES TO DISPLAY, DISPLAY GRADES FORM + REMARK REQUESTS -->
+        {% if iGrades == None %}
+        <div class="heading">
+            <center>
+                <h2>
+                    There are no grades currently available for viewing
+                </h2>
+            </center>
+        </div>
+
+        <section>
+            {% with flashMessages = get_flashed_messages() %}
+            {% if flashMessages %}
+            <div id="closeWarning" class="incorrectAuthDiv">
+                {% for flash in flashMessages %}
+                <span id="closeWarning" class="closeWarningButton" onclick="closeWarning()">&times;</span>
+                {{ flash }}
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+            <center>
+                <h2>Enter Grades</h2>
+            </center>
+            <div class="remarkFormContainer">
+                <div class="loginCard">
+                    <form action="{{ url_for('enterGrades') }}" method="POST">
+
+                        <label>Student Number</label>
+                        <input type="text" class="inputStyle" name="sNum" placeholder="Enter Student Number">
+
+                        <label>Assignment Name</label>
+                        <input type="text" class="inputStyle" name="aName" placeholder="Enter Evaluation">
+
+                        <label>Grade</label>
+                        <input type="text" class="inputStyle" name="pGrade" placeholder="Percentage">
+
+                        <div class='loginButtons'>
+                            <div>
+                                <input class='inputButton' type="submit" value="Add grade">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Remark Requests (No Grades to Display) -->
+
+            <section class="sRemarkRequests">
+                <center>
+                    <h2>Remark Requests</h2>
+                </center>
+
+                <div class="feedbackCardContainer">
+                    {% for remark in remarks %}
+                    <div class="remarkCard">
+                        <div class="remarkReqCardContent">
+                            <h5 class="textColour">Student Number: {{ remark['Sid'] }}</h5>
+                            <h5 class="textColour">Evaluation Name: {{ remark['eval'] }}</h5>
+                            <p class="reason">Reason: {{ remark['reason'] }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </section>
+
+        <!-- GRADES EXIST IN DB, DISPLAY GRADES + OTHER CONTENT -->
+        {% else %}
+        <section>
+            <div class="iGradesDiv">
+                <div class="iGradesCard">
+                    <div class="iGradesCardContent">
+                        <center>
+                            <h4 class="student"><u>Student Number</u></h4>
+                            {% for evals in evaluation %}
+                            <div class="dbDiv">
+                                <h5 class="student">{{ evals['Sid'] }}</h5>
+                            </div>
+                            {% endfor %}
+                        </center>
+                    </div>
+                </div>
+                <div class="iGradesCard">
+                    <div class="iGradesCardContent">
+                        <center>
+                            <h4 class="assignment"><u>Assignment</u></h4>
+                            {% for evals in evaluation %}
+                            <div class="dbDiv">
+                                <h5 class="assignment">{{ evals['eval'] }}</h5>
+                            </div>
+                            {% endfor %}
+                        </center>
+                    </div>
+                </div>
+
+                <div class="iGradesCard">
+                    <div class="iGradesCardContent">
+                        <center>
+                            <h4 class="mark"><u>Mark</u></h4>
+                            {% for evals in evaluation %}
+                            <div class="dbDiv">
+                                <h5 class="mark">{{ evals['mark'] }}</h5>
+                            </div>
+                            {% endfor %}
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Grades Form-->
+
+        <section class="enterGradesForm">
+            {% with flashMessages = get_flashed_messages() %}
+            {% if flashMessages %}
+            <div id="closeWarning" class="incorrectAuthDiv">
+                {% for flash in flashMessages %}
+                <span id="closeWarning" class="closeWarningButton" onclick="closeWarning()">&times;</span>
+                {{ flash }}
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+            <center>
+                <h2>Enter Grades</h2>
+            </center>
+            <div class="remarkFormContainer">
+                <div class="loginCard">
+                    <form action="{{ url_for('enterGrades') }}" method="POST">
+
+                        <label>Student Number</label>
+                        <input type="text" class="inputStyle" name="sNum" placeholder="Enter Student Number">
+
+                        <label>Assignment Name</label>
+                        <input type="text" class="inputStyle" name="aName" placeholder="Enter Evaluation">
+
+                        <label>Grade</label>
+                        <input type="text" class="inputStyle" name="pGrade" placeholder="Percentage">
+
+                        <div class='loginButtons'>
+                            <div>
+                                <input class='inputButton' type="submit" value="Add grade">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Remark Requests -->
+        <section class="sRemarkRequests">
+            <center>
+                <h2>Remark Requests</h2>
+            </center>
+
+            <div class="feedbackCardContainer">
+                {% for remark in remarks %}
+                <div class="remarkCard">
+                    <div class="remarkReqCardContent">
+                        <h5 class="textColour">Student Number: {{ remark['Sid'] }}</h5>
+                        <h5 class="textColour">Evaluation Name: {{ remark['eval'] }}</h5>
+                        <p class="reason">Reason: {{ remark['reason'] }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </section>
+
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <!-- footer -->
+    <footer>
+        <div class="logoDiv">
+            <a href="https://www.utsc.utoronto.ca/cms/computer-science-1" target="_blank">
+                <img src="../static/resources/uoftlogo.png" alt="UofT logo" class="logoimg" />
+            </a>
+            <p class="footerText"> UTSC Computer Science</p>
+        </div>
+        <div class="creatorsDiv">
+            <p>Created by Manpreet Bhatti and Masheil Mir</p>
+        </div>
+    </footer>
+</body>
+
+</html>

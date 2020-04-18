@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Labs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/styles/labs.css" type="text/css">
+    <link rel="stylesheet" href="../static/styles/globalStyles.css">
+    <link rel="stylesheet" href="../static/styles/globalStyles2.css">
+</head>
+
+<body class="main">
+    <nav class="sideBar">
+        <div class="welcomeMsgDiv">
+            <h5>
+                Logged in as {{ user }}
+            </h5>
+            <a href='/logout' class="navButton">
+                <button class='link'>
+                    <font class="fontStyle">Logout</font>
+                </button>
+            </a>
+        </div>
+        <div class="headerDiv">
+            <h1>
+                Labs
+            </h1>
+        </div>
+        <div class="buttonDiv">
+            <a href="#" onclick="openSideNavBar()">
+                <img src="../static/resources/sidebarIcon.png" alt="no image" class="sidebarImg">
+            </a>
+        </div>
+    </nav>
+
+
+    <div id="sideMenu" class="sideBarDiv">
+        <a href="#" class="closeButton" onclick="closeSideNavBar()">&times;</a>
+
+        <div class="navDiv">
+
+            <div>
+                <a href="/home">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Home</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/lectures">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Lectures</font>
+                    </button>
+                </a>
+            </div>
+
+            <div>
+                <a href="/assignments">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Assignments</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/resources">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Resources</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/labs">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Labs</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/tests">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Tests</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/grades">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Grades</font>
+                    </button>
+                </a>
+            </div>
+            <div>
+                <a href="/feedbacks">
+                    <button class='sideBarlink'>
+                        <font class="fontStyle">Feedbacks</font>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainDes">
+        <!-- TA Cards -->
+        <section>
+            <div class="alignDiv">
+                <div>
+                    <h3><u>Tutorial Information</u></h3>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="teamDiv">
+                <div class="teamCard">
+                    <img src="../static/resources/user.png" alt="No Image" class="img">
+                    <div class="cardContent">
+                        <h4 class="name">Vidya Ananda</h4>
+                        <p>
+                            <div class="textColour">Teaching Assistant</div>
+                        </p>
+                        <p><b>Email:</b> <em> vidya.ananda@mail.utoronto.ca</em></p>
+                        <p><b>Tutorial Section:</b><em> TUT001</em></p>
+                        <p><b>Tutorial Time:</b><em>TU 3pm-5pm</em></p>
+                        <p><b>Office:</b><em>IC493</em></p>
+                        <p><b>Office Hours:</b> <em>TBA</em></p>
+                    </div>
+                </div>
+
+                <div class="teamCard">
+                    <img src="../static/resources/user.png" alt="No Image" class="img">
+                    <div class="cardContent">
+                        <h4 class="name">Brian Lam</h4>
+                        <p>
+                            <div class="textColour">Teaching Assistant</div>
+                        </p>
+                        <p><b>Email:</b> <em> brian.lam@mail.utoronto.ca</em></p>
+                        <p><b>Tutorial Section:</b><em> TUT002</em></p>
+                        <p><b>Tutorial Time:</b><em>MO 11am-12pm</em></p>
+                        <p><b>Office:</b><em>IC493</em></p>
+                        <p><b>Office Hours:</b> <em>TBA</em></p>
+                    </div>
+                </div>
+
+                <div class="teamCard">
+                    <img src="../static/resources/user.png" alt="No Image" class="img">
+                    <div class="cardContent">
+                        <h4 class="name">Dharmik Shah</h4>
+                        <p>
+                            <div class="textColour">Teaching Assistant</div>
+                        </p>
+                        <p><b>Email:</b> <em> dharmik.shah@mail.utoronto.ca</em></p>
+                        <p><b>Tutorial Section:</b><em> TUT003</em></p>
+                        <p><b>Tutorial Time:</b><em>TH 9am-10pm</em></p>
+                        <p><b>Office:</b><em>IC493</em></p>
+                        <p><b>Office Hours:</b> <em>TBA</em></p>
+                    </div>
+                </div>
+
+                <div class="teamCard">
+                    <img src="../static/resources/user.png" alt="No Image" class="img">
+                    <div class="cardContent">
+                        <h4 class="name">Frederic Pun</h4>
+                        <p>
+                            <div class="textColour">Teaching Assistant</div>
+                        </p>
+                        <p><b>Email:</b> <em> fredric.pun@mail.utoronto.ca</em></p>
+                        <p><b>Tutorial Section:</b><em> TUT004</em></p>
+                        <p><b>Tutorial Time:</b><em>FR 1pm-2pm</em></p>
+                        <p><b>Office:</b><em>IC493</em></p>
+                        <p><b>Office Hours:</b> <em>TBA</em></p>
+                    </div>
+                </div>
+
+                <div class="teamCard">
+                    <img src="../static/resources/user.png" alt="No Image" class="img">
+                    <div class="cardContent">
+                        <h4 class="name">Kevin Zhang</h4>
+                        <p>
+                            <div class="textColour">Teaching Assistant</div>
+                        </p>
+                        <p><b>Email:</b> <em> kevin.zhang@mail.utoronto.ca</em></p>
+                        <p><b>Tutorial Section:</b><em> TUT005</em></p>
+                        <p><b>Tutorial Time:</b><em>WE 10am-11am</em></p>
+                        <p><b>Office:</b><em>IC493</em></p>
+                        <p><b>Office Hours:</b> <em>TBA</em></p>
+                    </div>
+                </div>
+
+                <div class="teamCard">
+                    <img src="../static/resources/user.png" alt="No Image" class="img">
+                    <div class="cardContent">
+                        <h4 class="name">Sakina Shabbir</h4>
+                        <p>
+                            <div class="textColour">Teaching Assistant</div>
+                        </p>
+                        <p><b>Email:</b> <em> sakina.shabbir@mail.utoronto.ca</em></p>
+                        <p><b>Tutorial Section:</b><em> TUT006</em></p>
+                        <p><b>Tutorial Time:</b><em>TU 3pm-4pm</em></p>
+                        <p><b>Office:</b><em>IC493</em></p>
+                        <p><b>Office Hours:</b> <em>TBA</em></p>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <div class="mainDes">
+        <!-- Lab Cards -->
+        <section>
+            <div class="alignDiv">
+                <div>
+                    <h3><u>Labs</u></h3>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="labDiv">
+                <div class="labCard">
+                    <div class="labCardContent">
+                        <h4 class="name">Lab 1</h4>
+                        <p>
+                            <div class="textColour">Python, Command Line</div>
+                        </p>
+                        <a href="../static/resources/dummy.pdf" target="_blank">
+                            <p class="labTitle">Tutorial 1 - Week 2</p>
+                        </a>
+                        <p class=labCardContent>
+                            <div class="textColour">Click above to access lab</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="labCard">
+                    <div class="labCardContent">
+                        <h4 class="name">Lab 2</h4>
+                        <p>
+                            <div class="textColour">Relational Algebra</div>
+                        </p>
+                        <a href="./static/resources/dummy.pdf" target="_blank">
+                            <p class="labTitle">Tutorial 2 - Week 3</p>
+                        </a>
+                        <p class=labCardContent>
+                            <div class="textColour">Click above to access lab</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="labCard">
+                    <div class="labCardContent">
+                        <h4 class="name">Lab 3</h4>
+                        <p>
+                            <div class="textColour">MySQL</div>
+                        </p>
+                        <a href="./static/resources/dummy.pdf" target="_blank">
+                            <p class="labTitle">Tutorial 3 - Week 4</p>
+                        </a>
+                        <p class=labCardContent>
+                            <div class="textColour">Click above to access lab</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="labCard">
+                    <div class="labCardContent">
+                        <h4 class="name">Lab 4</h4>
+                        <p>
+                            <div class="textColour">Tables, Insert, Update</div>
+                        </p>
+                        <a href="./static/resources/dummy.pdf" target="_blank">
+                            <p class="labTitle">Tutorial 4 - Week 5</p>
+                        </a>
+                        <p class=labCardContent>
+                            <div class="textColour">Click above to access lab</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="labCard">
+                    <div class="labCardContent">
+                        <h4 class="name">Lab 5</h4>
+                        <p>
+                            <div class="textColour">Views, Joins, Concat</div>
+                        </p>
+                        <a href="./static/resources/dummy.pdf" target="_blank">
+                            <p class="labTitle">Tutorial 5 - Week 6</p>
+                        </a>
+                        <p class=labCardContent>
+                            <div class="textColour">Click above to access lab</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="labCard">
+                    <div class="labCardContent">
+                        <h4 class="name">Lab 6</h4>
+                        <p>
+                            <div class="textColour">Basic Webpage</div>
+                        </p>
+                        <a href="./static/resources/dummy.pdf" target="_blank">
+                            <p class="labTitle">Tutorial 6 - Week 7</p>
+                        </a>
+                        <p class=labCardContent>
+                            <div class="textColour">Click above to access lab</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="labCard">
+                    <div class="labCardContent">
+                        <h4 class="name">Lab 7</h4>
+                        <p>
+                            <div class="textColour">HTML, CSS</div>
+                        </p>
+                        <a href="./static/resources/dummy.pdf" target="_blank">
+                            <p class="labTitle">Tutorial 7 - Week 8</p>
+                        </a>
+                        <p class=labCardContent>
+                            <div class="textColour">Click above to access lab</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="labCard">
+                    <div class="labCardContent">
+                        <h4 class="name">Lab 8</h4>
+                        <p>
+                            <div class="textColour">PHP</div>
+                        </p>
+                        <a href="./static/resources/dummy.pdf" target="_blank">
+                            <p class="labTitle">Tutorial 8 - Week 9</p>
+                        </a>
+                        <p class=labCardContent>
+                            <div class="textColour">Click above to access lab</div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="labCard">
+                    <div class="labCardContent">
+                        <h4 class="name">Lab 9</h4>
+                        <p>
+                            <div class="textColour">jQuery</div>
+                        </p>
+                        <a href="./static/resources/dummy.pdf" target="_blank">
+                            <p class="labTitle">Tutorial 9 - Week 10</p>
+                        </a>
+                        <p class=labCardContent>
+                            <div class="textColour">Click above to access lab</div>
+                        </p>
+                    </div>
+                </div>
+        </section>
+
+
+    </div>
+
+    <!--footer-->
+    <footer>
+        <div class="logoDiv">
+            <a href="https://www.utsc.utoronto.ca/cms/computer-science-1" target="_blank">
+                <img src="../static/resources/uoftlogo.png" alt="UofT logo" class="logoimg" />
+            </a>
+            <p class="footerText"> UTSC Computer Science</p>
+        </div>
+        <div class="creatorsDiv">
+            <p>Created by Manpreet Bhatti and Masheil Mir</p>
+        </div>
+    </footer>
+
+    <script src="../static/scripts/sideNavBarAnimation.js"></script>
+
+</body>
+
+</html>

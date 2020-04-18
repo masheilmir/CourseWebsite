@@ -1,0 +1,85 @@
+/* beginning of body styles */
+.main {
+  flex-direction: row;
+}
+
+.subheading {
+  font-style: italic;
+  font-style: bold;
+  font-size: 18px;
+}
+
+.borders {
+  margin-top: 60px;
+  border-style: outset;
+  border-color: grey;
+  border-collapse: separate;
+  border-spacing: 500px;
+}
+
+.names,
+.tut,
+.day {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 15px;
+}
+
+/* start of TA card styling */
+.mainDes,
+.teamContainer {
+  margin-top: 20px;
+}
+
+.alignDiv {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.teamContainer {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 2px 16px;
+  padding-bottom: 20px;
+}
+
+.teamCard {
+  width: 20%;
+  min-width: 19%;
+}
+
+.cardContent {
+  text-align: left;
+}
+
+.img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 250px;
+  height: auto;
+}
+/* end of TA card styling */
+
+/* start of lab card styling */
+
+.labDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.labCard {
+  width: 25%;
+  min-width: 24%;
+}
+
+/* end of lab card styling */
+
+.labCardContent,
+.names,
+.tut,
+.day {
+  text-align: center;
+}

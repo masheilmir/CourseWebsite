@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Login Portal</title>
+    <link rel="stylesheet" href="../static/styles/loginUser.css" type="text/css">
+    <link rel="stylesheet" href="../static/styles/globalStyles.css">
+    <script src="../static/scripts/sideNavBarAnimation.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    {% with flashMessages = get_flashed_messages() %}
+    {% if flashMessages %}
+    <div id="closeWarning" class="incorrectAuthDiv">
+        {% for flash in flashMessages %}
+        <span id="closeWarning" class="closeWarningButton" onclick="closeWarning()">&times;</span>
+        {{ flash }}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+    <div class='loginContainer'>
+        <div class='loginCard'>
+            <form action="/login" method="POST">
+                <label>Username</label>
+                <input class='inputStyle' type="text" name="username" placeholder="Username">
+
+                <label>Password</label>
+                <input class='inputStyle' type="text" name="password" placeholder="Password">
+
+                <div class='loginButtons'>
+                    <div>
+                        <input class='inputButton' type="submit" value="Log in">
+                    </div>
+                    <div class="registerDiv">
+                        Don't have an account? <br> <a href='/registerPortal'>Create one</a>.
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
