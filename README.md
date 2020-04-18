@@ -13,4 +13,4 @@ Go into the same directory of the application
 Run the following: 
 
 `python app.py`
-(`python3 app.py` on some machines)
+* (`python3 app.py` on some machines)
